@@ -41,7 +41,9 @@ jobs:
           export ZIP_FILE_NAME=agent_assets
           
           # Create a zip of the release - we'll rename it during upload
-          zip -r release.zip examples/*
+          # cd into examples so stored paths are relative to it
+          # (examples/agents-md/AGENTS.md becomes agents-md/AGENTS.md in the zip)
+          (cd examples && zip -r ../release.zip .)
           
           # Copy to S3
           aws s3 cp release.zip s3://${{ vars.AWS_RELEASE_BUCKET }}${{ vars.AWS_RELEASE_BUCKET_UTILS_PATH }}${ZIP_FILE_NAME}.zip
