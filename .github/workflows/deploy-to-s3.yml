@@ -45,5 +45,9 @@ jobs:
           # (examples/agents-md/AGENTS.md becomes agents-md/AGENTS.md in the zip)
           (cd examples && zip -r ../release.zip .)
           
-          # Copy to S3
+          # Copy the zip to S3
           aws s3 cp release.zip s3://${{ vars.AWS_RELEASE_BUCKET }}${{ vars.AWS_RELEASE_BUCKET_UTILS_PATH }}${ZIP_FILE_NAME}.zip
+
+          # Also copy the unzipped contents of examples/ to the same prefix (no .zip)
+          # (examples/agents-md/AGENTS.md becomes ${ZIP_FILE_NAME}/agents-md/AGENTS.md)
+          aws s3 sync examples/ s3://${{ vars.AWS_RELEASE_BUCKET }}${{ vars.AWS_RELEASE_BUCKET_UTILS_PATH }}${ZIP_FILE_NAME}/ --delete
