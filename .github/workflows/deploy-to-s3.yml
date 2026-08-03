@@ -1,0 +1,47 @@
+name: Deploy Release to S3
+
+# This script creates a zip file and uploads to s3
+# An IAM role must present to provide permissions 
+
+# Set the following in GitHub environment secrets and variables:
+# Secrets:
+#   AWS_RELEASE_ACCT
+#   AWS_RELEASE_REGION
+# Variables:
+#   AWS_RELEASE_BUCKET - bucket to upload artifact to
+#   AWS_RELEASE_BUCKET_UTILS_PATH - Must be single / or begin and end with /
+#
+
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_RELEASE_ACCT }}:role/github-actions-role
+          aws-region: ${{ secrets.AWS_RELEASE_REGION }}
+
+      - name: Copy release to S3
+        run: |
+          # Name of File
+          export ZIP_FILE_NAME=agent_assets
+          
+          # Create a zip of the release - we'll rename it during upload
+          zip -r release.zip examples/*
+          
+          # Copy to S3
+          aws s3 cp release.zip s3://${{ vars.AWS_RELEASE_BUCKET }}${{ vars.AWS_RELEASE_BUCKET_UTILS_PATH }}${ZIP_FILE_NAME}.zip
