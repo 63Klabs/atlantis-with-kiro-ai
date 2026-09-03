@@ -52,4 +52,4 @@ And after reviewing the response:
 Fetch the automate-audit-update-npm-packages.md and add it to .kiro/steering
 ```
 
-For more about the Atlantis MCP server, visit [mcp.atlantis.63klabs.net](mcp.atlantis.63klabs.net)
+For more about the Atlantis MCP server, visit [mcp.atlantis.63klabs.net](https://mcp.atlantis.63klabs.net)
