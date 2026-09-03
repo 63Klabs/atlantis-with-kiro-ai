@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **steering/automate-audit-update-npm-packages.md** - Instructed AI to advance versions, not just rely on `audit --fix`
-- **steering/automate-audit-update-npm-packages.md** - Instructed AI to advance versions, not just rely on python audit
+- **steering/automate-audit-update-python-packages.md** - Instructed AI to advance versions, not just rely on python audit
 
 ---
 
