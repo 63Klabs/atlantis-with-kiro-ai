@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-Skills for Atlantis DevOps Platform. Converting some of the steering documents to skills so that Kiro and other agents can utilize them.
+Skills for Atlantis DevOps Platform. Converted some steering documents into skills so Kiro and other agents can use them.
 
 - **skills/atlantis-platform-resources**
 - **skills/automate-audit-update-npm-packages**
