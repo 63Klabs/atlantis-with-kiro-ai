@@ -43,7 +43,7 @@ jobs:
           # Publish only these folders from examples/ (zip + S3 sync).
           # Anything else in examples/ (e.g. mcp/) is intentionally excluded.
           # Staging both outputs from the same folder keeps them identical.
-          INCLUDE_DIRS="agents-md hooks steering"
+          INCLUDE_DIRS="agents-md hooks steering skills"
           rm -rf .release
           for d in $INCLUDE_DIRS; do
             mkdir -p ".release/$d"
