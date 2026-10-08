@@ -27,10 +27,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_RELEASE_ACCT }}:role/github-actions-role
           aws-region: ${{ secrets.AWS_RELEASE_REGION }}
@@ -43,7 +43,7 @@ jobs:
           # Publish only these folders from examples/ (zip + S3 sync).
           # Anything else in examples/ (e.g. mcp/) is intentionally excluded.
           # Staging both outputs from the same folder keeps them identical.
-          INCLUDE_DIRS="agents-md hooks steering skills"
+          INCLUDE_DIRS="agents-md hooks steering"
           rm -rf .release
           for d in $INCLUDE_DIRS; do
             mkdir -p ".release/$d"
@@ -52,6 +52,19 @@ jobs:
               cp -a "examples/$d/." ".release/$d/"
             fi
           done
+
+          # Skills are nested (skills/{skillname}/SKILL.md) but need to be published
+          # as skills/{skillname}.md. Handle separately.
+          if [ -d "examples/skills" ]; then
+            for skill_dir in examples/skills/*/; do
+              skill_name=$(basename "$skill_dir")
+              skill_file="${skill_dir}SKILL.md"
+              if [ -f "$skill_file" ]; then
+                mkdir -p ".release/skills"
+                cp "$skill_file" ".release/skills/${skill_name}.md"
+              fi
+            done
+          fi
 
           # Create a zip of the staged release - we'll rename it during upload
           # cd into the staging dir so stored paths are relative to it
