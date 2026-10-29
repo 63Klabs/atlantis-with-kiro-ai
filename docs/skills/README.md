@@ -27,4 +27,5 @@ Available Skills:
 - Audit Update NPM Packages
 - Audit Update Python Packages
 - Update AWS Managed Lambda Layers
+- [Import Issues from GitHub](./import-issues-from-github.md)
 - [Plan from Issue](./plan-from-issue.md)
