@@ -8,7 +8,7 @@ In your IDE's agentic chat, just instruct:
 
 ```markdown
 
-USER: What steering documents are available from atlantis?
+USER: What steering documents are available from Atlantis?
 
 ---
 
