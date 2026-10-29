@@ -1,6 +1,6 @@
 # Skill: Import Issues from GitHub
 
-> Issues come from the public. Review each imported ISSUE.md before you plan work from it.
+> Issues come from the public (even on private repositories, treat as public!). Any comments may be added to the issue in GitHub before import. A human should approve each issue in GitHub before it is imported for work. After an issue is reviewed and accepted by a human in GitHub, it must be given the `approved for development` label.  **The `approved for development` label is a gate that should only be given to human-reviewed requests!**
 
 This skill pulls approved GitHub issues into spec directories so they can be planned with the [plan-from-issue](./plan-from-issue.md) skill. It is generic and works in any project whose git remote points to GitHub.
 
