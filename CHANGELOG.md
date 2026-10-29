@@ -5,16 +5,26 @@ All notable changes to the Atlantis with Kiro AI assets will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.7] (2026-10-29)
+
+### Added
+
+Documentation and skills for importing issues from GitHub and generating a pre-spec-driven workflow PLAN.md based on an imported or manually created ISSUE.md
+
+- **skills/import-issues-from-github**: Import unassigned issues labeled for development from GitHub and generate an `ISSUE.md`
+- **skills/plan-from-issue**: Generate a plan from an ISSUE.md (imported or otherwise) that verifies the issue, reviews the codebase, and identifies gaps before presenting the user with a set of questions, options, and recommendations prior to starting the spec-driven process.
+- **docs/**: Documentation on each of the assets.
+
 ## [v0.0.6] (2026-10-05)
 
 ### Added
 
-Skills for Atlantis DevOps Platform. Converted some steering documents into skills so Kiro and other agents can use them.
+Skills for 63Klabs Atlantis DevOps Platform. Converted some steering documents into skills so Kiro and other agents can use them.
 
 - **skills/atlantis-platform-resources**
-- **skills/automate-audit-update-npm-packages**
-- **skills/automate-audit-update-python-packages**
-- **skills/automate-update-lambda-layers**
+- **skills/audit-update-npm-packages**
+- **skills/audit-update-python-packages**
+- **skills/update-lambda-layers**
 
 ## [v0.0.5] (2026-09-02)
 
@@ -52,5 +62,6 @@ Example:
 ### Version Links
 
 [Unreleased]: https://github.com/63klabs/atlantis-with-kiro-ai/
+[v0.0.7]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.7
 [v0.0.6]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.6
 [v0.0.5]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.5
