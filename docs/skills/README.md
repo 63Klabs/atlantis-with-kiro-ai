@@ -23,9 +23,33 @@ Sometimes skills receive updates. You can have your Atlantis MCP check for diffe
 
 Available Skills:
 
-- Atlantis Platform Resources
-- Audit Update NPM Packages
-- Audit Update Python Packages
-- Update AWS Managed Lambda Layers
+- [Atlantis Platform Resources](./atlantis-platform-resources.md)
+- [Audit Update NPM Packages](./audit-update-npm-packages.md)
+- [Audit Update Python Packages](./audit-update-python-packages.md)
+- [Update AWS Managed Lambda Layers](./update-aws-lambda-layers.md)
 - [Import Issues from GitHub](./import-issues-from-github.md)
 - [Plan from Issue](./plan-from-issue.md)
+
+## Installing Skills via Atlantis MCP
+
+You can ask the Atlantis MCP to provide a list of skills and and pick the skill to install either within the project or in your user profile.
+
+```markdown
+
+User: List available skills from Atlantis
+
+---
+
+Agent: *MCP Provides list*
+
+---
+
+User: Install the skill import-issues-from-github to this project.
+
+---
+
+Agent: *MCP downloads and adds skill to project*
+
+```
+
+> **NOTE:** Ensure agent installed the file in the correct location (`./kiro/skills/{skillname}/SKILL.md` either in your user directory or project workspace.) 

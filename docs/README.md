@@ -1,8 +1,8 @@
 # Documentation
 
-- Agents file
+- [MCP](./mcp/README.md)
+- [Agents file](./agents-md/README.md)
 - Hooks
-- MCP
 - [Skills](./skills/README.md)
-- Steering
+- [Steering](./steering/README.md)
 - Workflows
