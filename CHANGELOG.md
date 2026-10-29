@@ -5,7 +5,7 @@ All notable changes to the Atlantis with Kiro AI assets will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.0.7] (2026-10-29)
+## [v0.0.9] (2026-10-29)
 
 ### Added
 
@@ -25,6 +25,10 @@ Skills for 63Klabs Atlantis DevOps Platform. Converted some steering documents i
 - **skills/audit-update-npm-packages**
 - **skills/audit-update-python-packages**
 - **skills/update-lambda-layers**
+
+## v0.0.6-v0.0.8 (2026-10-08)
+
+Resolving release packaging issues.
 
 ## [v0.0.5] (2026-09-02)
 
@@ -62,6 +66,6 @@ Example:
 ### Version Links
 
 [Unreleased]: https://github.com/63klabs/atlantis-with-kiro-ai/
-[v0.0.7]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.7
+[v0.0.9]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.9
 [v0.0.6]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.6
 [v0.0.5]: https://github.com/63klabs/atlantis-with-kiro-ai/releases/tag/v0.0.5
