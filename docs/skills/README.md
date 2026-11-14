@@ -29,6 +29,7 @@ Available Skills:
 - [Update AWS Managed Lambda Layers](./update-aws-lambda-layers.md)
 - [Import Issues from GitHub](./import-issues-from-github.md)
 - [Plan from Issue](./plan-from-issue.md)
+- [Release Changelog (Package)](./release-changelog-package.md)
 
 ## Installing Skills via Atlantis MCP
 

@@ -10,6 +10,7 @@ The example files use front matter to decide when Kiro loads them. Each one load
 
 Available steering:
 
+- [Changelog Convention (Package)](./changelog-convention-package.md)
 - [Multi-Resource Source Layout](./atlantis-multi-resource-src.md)
 - [Python Dependency Management](./atlantis-python-dependency-management.md)
 - [WebApi with Node.js and cache-data](./atlantis-webapi-node-cache-data.md)
