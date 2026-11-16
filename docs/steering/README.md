@@ -10,7 +10,15 @@ The example files use front matter to decide when Kiro loads them. Each one load
 
 Available steering:
 
+- [Changelog Convention (Application)](./changelog-convention-application.md)
 - [Changelog Convention (Package)](./changelog-convention-package.md)
 - [Multi-Resource Source Layout](./atlantis-multi-resource-src.md)
+- [Naming Conventions (Common)](./naming-conventions-common.md)
+- [Naming Conventions (CloudFormation/SAM)](./naming-conventions-cloudformation.md)
+- [Naming Conventions (CloudFormation/SAM, Atlantis)](./naming-conventions-cloudformation-atlantis.md)
+- [Naming Conventions (JavaScript/TypeScript)](./naming-conventions-javascript.md)
+- [Naming Conventions (Python)](./naming-conventions-python.md)
+- [Naming Conventions (Shell)](./naming-conventions-shell.md)
 - [Python Dependency Management](./atlantis-python-dependency-management.md)
+- [Spec Naming Convention](./spec-naming-convention.md)
 - [WebApi with Node.js and cache-data](./atlantis-webapi-node-cache-data.md)

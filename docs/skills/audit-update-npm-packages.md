@@ -12,6 +12,7 @@ Invoke it with `/audit-update-npm-packages`, or ask the agent to audit npm packa
 What it does:
 
 - **Edits direct dependencies:** Sets the fixed version in `package.json` and keeps your pinning style (exact, caret, or tilde).
+- **Keeps `@63klabs/cache-data` current:** Wherever a `package.json` already lists it, the skill moves it to the latest published version, even if the audit finds no problem. It keeps your pinning style, reinstalls so the lock file matches, and flags major version bumps. It never adds the package where it is not listed.
 - **Handles transitive packages separately:** Fixes packages you do not list directly through the lock file, and labels them that way in the report.
 - **Runs checks:** Runs `npm install`, `npm audit`, and `npm test` after the changes.
 - **Reports:** Lists old and new versions, severity, major version bumps, and anything it could not fix.

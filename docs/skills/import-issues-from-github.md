@@ -14,7 +14,7 @@ Invoke it with `/import-issues-from-github`, or ask the agent to import, pull, o
 What it does:
 
 - **Selects issues:** Finds open, unassigned issues that carry the exact label `approved for development`.
-- **Writes specs:** Saves each issue to `.kiro/specs/{version}-{slug}/ISSUE.md`. The version comes from the top header in CHANGELOG.md. If that release is already published, the skill adds a new unreleased patch header.
+- **Writes specs:** Saves each issue to `.kiro/specs/{version}-{slug}/ISSUE.md`. The version comes from the `(unreleased)` header in CHANGELOG.md. If there is none, the skill stops and follows your changelog steering, or asks you for the version. It does not edit CHANGELOG.md itself.
 - **Sanitizes text:** Places the title, description, and comments in code fences. It removes hidden characters and HTML comments, redacts reporter names and email addresses, and removes credentials it recognizes.
 - **Assigns the issue:** Assigns each imported issue to your GitHub user. It does not comment on, relabel, or close issues.
 - **Does not triage:** It makes no judgment about validity, priority, or scope.

@@ -67,11 +67,11 @@ Require `hasIssuesEnabled` true, `isArchived` false, and `viewerPermission` one 
 
 ### 4. Determine the spec version prefix
 
-Follow the workspace spec naming rule (`.kiro/steering/spec-naming-convention-release-level-changelog.md`):
+Follow the workspace spec naming rule (`.kiro/steering/spec-naming-convention.md`):
 
 1. Read the first version header in `CHANGELOG.md` (for example `## [v0.0.7] (unreleased)`).
 2. If it is marked `(unreleased)`, use it.
-3. If it carries a release date, add a new header to `CHANGELOG.md` with the patch number incremented by 1 and marked `(unreleased)`, as the rule describes. This is the only change this skill makes to `CHANGELOG.md`.
+3. If it carries a release date, or there is no `(unreleased)` header, stop before creating any spec directory. Follow the version check in the repository's `changelog-convention-*` steering file, which may add the header once the user confirms the version. If there is no such file, ask the user for the version. This skill does not edit `CHANGELOG.md` itself. Then read the header again from step 1.
 4. Replace the dots with dashes and drop the leading `v`: `v0.0.7` becomes `VERSION=0-0-7`.
 
 ### 5. Find candidates

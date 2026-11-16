@@ -5,6 +5,25 @@ All notable changes to the Atlantis with Kiro AI assets will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.0.11 (2026-11-16)
+
+### Added
+
+- **steering/naming-conventions-common.md**: Always-loaded naming rules shared by all languages: follow existing code, `UPPER_SNAKE_CASE` constants, `PascalCase` classes, acronyms written as words, and boolean prefixes.
+- **steering/naming-conventions-javascript.md, naming-conventions-python.md, naming-conventions-shell.md**: Short per-language naming rules that load when matching files are open.
+- **steering/naming-conventions-cloudformation.md**: Generic CloudFormation/SAM naming rules for parameters, logical IDs, conditions, outputs, tags, and physical names.
+- **steering/naming-conventions-cloudformation-atlantis.md**: Atlantis `Prefix`, `ProjectId`, and `StageId` naming rules and S3 bucket patterns, checked with the Atlantis MCP `validate_naming` tool.
+- **steering/spec-naming-convention.md**: Names spec directories `{version}-{feature-name}`. The version always comes from the `(unreleased)` heading in `CHANGELOG.md`.
+- **steering/changelog-convention-application.md**: Rules for maintaining `CHANGELOG.md` in an application repository where the changelog version is the release of several components. The agent asks you to confirm the release version before creating a spec.
+- **.kiro/steering/maintaining-examples.md**: Conventions for maintaining the skills and steering examples in this repository: file naming, keeping files generic and concise, and keeping docs in sync.
+- **docs/**: Documentation for each new steering file.
+
+### Changed
+
+- **skills/audit-update-npm-packages**: Always advances `@63klabs/cache-data` to its latest published version in every `package.json` that lists it, then reinstalls so the lock file matches. Flags major version bumps and never adds the package.
+- **skills/import-issues-from-github**: When there is no `(unreleased)` heading in `CHANGELOG.md`, it now stops and follows the repository's changelog steering, or asks for the version, instead of adding a patch heading itself.
+- **skills/update-aws-lambda-layers**: Leaves layers that use the `{{resolve:ssm:...}}` format untouched, because AWS public parameters always resolve to the latest version at deploy time. It no longer converts them to Mappings, and falls back to a Mapping only when a deployed region has no public parameter. Lambda Insights stays in Mappings.
+
 ## v0.0.10 (2026-11-13)
 
 ### Added
