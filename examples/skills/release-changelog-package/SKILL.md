@@ -1,6 +1,9 @@
 ---
 name: release-changelog-package
 description: Prepares the CHANGELOG.md section for release. Changes the `(unreleased)` heading for the current package.json version to a release date and adds a short intro under the heading. Run manually when the user is ready to release. Never run on the agent's own initiative.
+metadata:
+  sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
+  sourcePath: "examples/skills/release-changelog-package/SKILL.md"
 ---
 # Release Changelog
 

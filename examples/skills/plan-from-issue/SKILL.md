@@ -4,6 +4,8 @@ description: Reviews a spec directory's ISSUE.md against the actual codebase and
 metadata:
   inputs: spec directory containing ISSUE.md
   output: PLAN.md in the same directory
+  sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
+  sourcePath: "examples/skills/plan-from-issue/SKILL.md"
 ---
 
 # Plan from ISSUE.md

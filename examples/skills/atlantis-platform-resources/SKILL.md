@@ -1,6 +1,9 @@
 ---
 name: atlantis-platform-resources
 description: Find and use authoritative Atlantis platform resources through the Atlantis MCP server. Use when working in a repository scaffolded from an Atlantis starter, or when a request involves Atlantis CloudFormation templates, app starters, pipeline or buildspec configuration, samconfig deployment, resource naming conventions (Prefix-ProjectId-StageId), AWS SAM serverless stacks from 63Klabs, the @63klabs/cache-data package, Lambda caching with DynamoDB or S3, cache TTL or CacheableDataAccess, or Kiro agent assets such as steering documents, hooks, AGENTS.md files, and skills. Query the MCP server before relying on training recall or web search for any of these.
+metadata:
+  sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
+  sourcePath: "examples/skills/atlantis-platform-resources/SKILL.md"
 ---
 
 # Atlantis platform resources

@@ -1,6 +1,9 @@
 ---
 name: update-aws-lambda-layers
 description: Fetches the latest Lambda Insights extension and AWS Parameters and Secrets extension layer ARNs from AWS documentation and updates the Mappings section in application-infrastructure/template.yml. Leaves layers that are resolved from an AWS-provided public SSM parameter ({{resolve:ssm:...}}) untouched, and only falls back to a Mapping when a deployed region has no such parameter. Handles both x86-64 and ARM64 architectures for all regions currently defined in the template. Use when asked to update, refresh, or check Lambda layer ARNs or extension versions for Lambda Insights or the AWS Parameters and Secrets extension.
+metadata:
+  sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
+  sourcePath: "examples/skills/update-aws-lambda-layers/SKILL.md"
 ---
 
 # Update Lambda layer ARNs
