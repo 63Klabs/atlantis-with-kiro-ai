@@ -1,6 +1,6 @@
 # Skill: Plan from Issue
 
-> This skill expects an ISSUE.md to exist within a spec directory. ISSUE.md can be generated using a separate skill that pulls in an issue from Jira, GitHub, or other issue tracker. **Only pull in trusted issues from trusted sources reviewed by humans first!**
+> This skill expects an ISSUE.md to exist within a spec directory. ISSUE.md can be generated using a separate skill that pulls in an issue from Jira, [GitHub](./import-issues-from-github.md), or other issue tracker. **Only pull in trusted issues from trusted sources reviewed by humans first!** To plan from a project specifications document instead, use [Plan from Spec](./plan-from-spec.md).
 
 Since this skill is generic, and used for the spec-driven workflow, it can reside in one of two places:
 
