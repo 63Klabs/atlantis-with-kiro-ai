@@ -4,6 +4,7 @@ description: Find and use authoritative Atlantis platform resources through the 
 metadata:
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/atlantis-platform-resources/SKILL.md"
+  lastModified: "2026-10-05"
 ---
 
 # Atlantis platform resources

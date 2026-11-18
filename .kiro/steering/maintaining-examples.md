@@ -28,6 +28,12 @@ This repository stores skills, steering files, and AGENTS.md examples that the A
 - Choose `inclusion` deliberately. Use `always` only for rules that must apply with no matching file open, and keep those short. Use `fileMatch` with the narrowest pattern that works for everything else.
 - As a guide, a naming file is under about 100 lines, and a convention with several decision tables stays under about 200.
 
+## Skill metadata
+
+- Every `examples/skills/*/SKILL.md` has `lastModified` in its `metadata:` block, after `sourcePath`, as a quoted `"YYYY-MM-DD"` date with no time (`lastModified: "2026-11-16"`).
+- Set it to the date of the change whenever you change a skill's content. Do not change it for edits to the metadata block alone.
+- For a skill whose change date you do not know, use the date of the last commit that changed its content (`git log -1 --format=%cs -- <file>`, skipping metadata-only commits). If that is not available, use today's date.
+
 ## Changelog conventions
 
 - Use the `(unreleased)` marker only, never `- unreleased`.

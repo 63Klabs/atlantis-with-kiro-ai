@@ -5,6 +5,7 @@ metadata:
   requires: gh CLI (authenticated), git, python3
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/import-issues-from-github/SKILL.md"
+  lastModified: "2026-11-16"
 ---
 # Import approved GitHub issues into specs
 

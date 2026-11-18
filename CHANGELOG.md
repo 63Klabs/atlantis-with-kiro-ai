@@ -5,6 +5,16 @@ All notable changes to the Atlantis with Kiro AI assets will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.0.12 (2026-11-17)
+
+### Added
+
+- **skills/plan-from-spec**: Generates a reviewed `PLAN.md` from a developer-written `SPEC.md`. Treats the spec as trusted intent and keeps its stated decisions, then checks it for ambiguity, conflicts, missing requirements, and trade-offs through architect, security, software engineer, and cloud engineer lenses. The architect lens checks whether the resources the spec names fit the application's architecture, or recommends resources when the spec leaves them open. Iterates with numbered questions until the plan is locked.
+- **docs/skills/plan-from-spec.md**: Documentation for `plan-from-spec`.
+- **skills/**: Every skill now has a `lastModified` date (`YYYY-MM-DD`) in its metadata.
+- **.kiro/steering/maintaining-examples.md**: New "Skill metadata" section that requires `lastModified` and says how to set it.
+
+
 ## v0.0.11 (2026-11-16)
 
 ### Added

@@ -6,6 +6,7 @@ metadata:
   output: PLAN.md in the same directory
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/plan-from-issue/SKILL.md"
+  lastModified: "2026-10-27"
 ---
 
 # Plan from ISSUE.md

@@ -4,6 +4,7 @@ description: Scans all requirements*.txt files in the repository (requirements.t
 metadata:
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/audit-update-python-packages/SKILL.md"
+  lastModified: "2026-10-27"
 ---
 
 # Audit and update Python packages

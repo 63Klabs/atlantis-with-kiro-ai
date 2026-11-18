@@ -4,6 +4,7 @@ description: Scans all package.json files in the repository (excluding node_modu
 metadata:
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/audit-update-npm-packages/SKILL.md"
+  lastModified: "2026-11-16"
 ---
 
 # Audit and update npm packages

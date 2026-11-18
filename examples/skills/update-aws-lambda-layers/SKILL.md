@@ -4,6 +4,7 @@ description: Fetches the latest Lambda Insights extension and AWS Parameters and
 metadata:
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/update-aws-lambda-layers/SKILL.md"
+  lastModified: "2026-11-16"
 ---
 
 # Update Lambda layer ARNs

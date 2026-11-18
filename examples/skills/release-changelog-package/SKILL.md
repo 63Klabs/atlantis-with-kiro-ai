@@ -4,6 +4,7 @@ description: Prepares the CHANGELOG.md section for release. Changes the `(unrele
 metadata:
   sourceRepo: "https://github.com/63Klabs/atlantis-with-kiro-ai"
   sourcePath: "examples/skills/release-changelog-package/SKILL.md"
+  lastModified: "2026-11-13"
 ---
 # Release Changelog
 
